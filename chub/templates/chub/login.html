@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TECHNOTHLON</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=DynaPuff&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="login">
-        <div class="top">
-            <h2>Login</h2>
+    <div class="FLEX main">
+        <div class="FLEX2 size">
+            <!-- TECHNOTHLON 2K22 -->
+            <img src="{%static "\images\Technothlon white.svg" %}" alt="">
         </div>
-        <div class="main">
-            <form method="POST">
-                {% csrf_token %}
-                {{form}}
-                <button type="submit">Login</button>
-            </form>
-            
+        <div class="flex1 ">
+            <div class="left_techno border center">
+            MAZE HUB
+                <!-- <img src="\images\technotholon.png" alt=""> -->
+            </div>
+            <div class="border center flex1">
+                LOGIN
+                <hr>
+                {% comment %} <div style="margin-top: 15px;margin-bottom: 5px;font-size: 28px; color: red">
+                    your id password is incorrect
+                </div> {% endcomment %}
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form}}
+                    <button type="submit">Login</button>
+                </form>
+          
+            </div>
+
         </div>
     </div>
+
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
+    </style>
 </body>
+
 </html>
