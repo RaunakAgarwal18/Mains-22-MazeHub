@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a{
+        text-decoration:none;
+        color:black;
+       
+    }
+    a:hover{
+        cursor:text;
+    }
+</style>
+<body>
+    
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloribus 
+        <form>
+            <button >submit</button>
+        </form>
+       <!-- {{ val }} -->
+       quos incidunt nostrum. Excepturi alias asperiores nemo tenetur facere non, itaque eveniet tempore nisi magni quae id quaerat animi nobis.</h1>
+</body>
+<script>
+    
+    document.getElementsByTagName("button")[0].addEventListener("click",(e)=>{
+            e.preventDefault()
+            var data={
+                question: 1,
+                time: 55,
+                score:80,
+            }
+            const temp="abs"
+        fetch("{% url '1' %}",{
+            method:"POST" ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        })
+    })
+    
+
+</script>
+
+</html>
