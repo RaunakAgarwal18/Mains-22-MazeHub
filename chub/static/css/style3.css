@@ -1,0 +1,135 @@
+body {
+
+    background-color: black;
+    color: white;
+    font-size: 55px;
+    height: 100vh;
+    margin: 0px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    font-family: 'Avenir LT Std';
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.direction {
+    flex-direction: column;
+
+}
+
+.content {
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.font_size {
+    font-size: 28px;
+}
+
+.size {
+    height: 19%;
+    width: 70%;
+}
+.link{
+
+    cursor: default;
+
+}
+.size2 {
+    height: 81%;
+    width: 30%;
+    font-size: 25px;
+}
+
+.size3 {
+    height: 81%;
+    width: 70%;
+    font-size: 28px;
+    margin-top: 0px;
+}
+
+hr {
+    width: 350px;
+}
+
+.img1 {
+
+    width: 50%;
+    height: 12%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.img2{
+width: 200px;
+    height: 200px;
+}
+.button {
+    background-color: #1526e0;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 100px;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+.margin_top {
+    margin-top: 5%;
+}
+
+.button5 {
+    background-color: #555555;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+p{
+    cursor: default;
+}
+label {
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    font-family: sans-serif;
+
+}
+
+input {
+    height: 50px;
+    width: 70%;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+
+}
+
+
+
+img {
+
+    background-color: black;
+    width: 40%;
+    height: 40%;
+
+    border-radius: 15px;
+}
+
+@import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
