@@ -1,0 +1,113 @@
+body{
+
+    background-color:black;
+    color: white;
+    font-size: 55px;
+    height: 100vh;
+    margin: 0px;
+   padding-left: 20px;
+   padding-right: 20px;
+    font-family:'Avenir LT Std';
+    background-image: url('Frame.png');
+    
+}
+.main{
+    height: 100%;
+    width: 100%;
+
+}
+.flex1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70%;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+   
+
+}
+.FLEX{
+    display: flex;
+    
+    flex-direction: column;
+
+   
+}
+.FLEX2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.size{
+    height: 20%;
+    width: 100%;
+}
+
+img{
+ 
+ background-color: black;
+    width: 40%;
+    height:  65%;
+
+    border-radius: 15px;
+}
+.center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    
+}
+hr{
+    width: 60%;
+    margin: 10px;
+}
+.border{
+height: 90%;
+width: 30%;
+/* box-shadow: 0 0px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); */
+text-align: center;
+background-color: black;
+
+}
+form{
+    width: 100%;
+}
+label{
+    width: 100%;
+height: 50px; 
+font-size: 27px;
+font-family: sans-serif;
+ 
+}
+input{
+    height: 40px; 
+    width: 55%;
+font-size: 30px;
+border-radius: 10px;
+margin-top: 10px; 
+margin-bottom: 10px; 
+
+}
+.button{
+    width: 30%;
+    height: 50px;
+    background-color:rgb(9, 9, 216);
+  color: white;
+  border: none;
+}
+.left_techno{
+font-size: 50px;
+font-weight: 600;
+border-right: white 5px solid;
+background-color: black;
+color: #bfa31e;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+z-index: 1;
+}
