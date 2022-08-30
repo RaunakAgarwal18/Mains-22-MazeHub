@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'cornhub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Technothlon',
+        'NAME': 'Mazehub',
         'USER':'postgres',
         'PASSWORD':'zGB%xVCAO9Z6',
         'HOST':'localhost',
@@ -117,7 +117,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL='1'
+LOGIN_REDIRECT_URL='guide'
 LOGIN_URL='login'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
