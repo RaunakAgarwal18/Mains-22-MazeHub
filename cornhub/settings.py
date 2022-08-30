@@ -77,6 +77,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cornhub.wsgi.application'
+STATIC_URL = '/static/'
+
+#Location of static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
