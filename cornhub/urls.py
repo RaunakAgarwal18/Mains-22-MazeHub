@@ -17,8 +17,13 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #LOCAL
+     path('admin/', admin.site.urls),
     path('',include('chub.urls'))
+
+    #PROD
+    # path('mazehub/admin/', admin.site.urls),
+    # path('mazehub/',include('chub.urls'))
 
 ]
 
