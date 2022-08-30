@@ -21,7 +21,7 @@
             <!-- TECHNOTHLON 2K22 -->
             <img src="{%static "\images\Technothlon white.svg" %}" alt="">
         </div>
-        <div class="flex1 ">
+        <div class="flex1">
             <div class="left_techno border center">
             MAZE HUB
                 <!-- <img src="\images\technotholon.png" alt=""> -->
@@ -34,8 +34,22 @@
                 </div> {% endcomment %}
                 <form method="POST">
                     {% csrf_token %}
-                    {{form}}
-                    <button class="button">Login</button>
+                    {%if form.non_field_errors%}
+                    {%for error in form.non_field_errors %}
+                    <p style="font-size:18px">{{error}}</p>
+                    {%endfor%}
+                    {%endif%}
+                    <div class="username">
+                        {{form.username.label}}
+                        {{form.username}}
+                        {{form.password.label}}
+                        {{form.password}}
+                    </div>
+
+                    <div class="error">{{form.username.errors|striptags}}
+                        {{form.password.errors|striptags}}</div>
+                    
+                    <button class="button"><a onclick="window.location.replace('{% url "guide"%}')">Login</a></button>
                 </form>
           
             </div>

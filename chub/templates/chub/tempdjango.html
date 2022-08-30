@@ -20,7 +20,7 @@
     
     <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloribus 
         <form>
-            <button >submit</button>
+            <button ><a onclick="window.location.replace('{% url "login"%}')">Submit</a></button>
         </form>
        <!-- {{ val }} -->
        quos incidunt nostrum. Excepturi alias asperiores nemo tenetur facere non, itaque eveniet tempore nisi magni quae id quaerat animi nobis.</h1>
@@ -30,11 +30,9 @@
     document.getElementsByTagName("button")[0].addEventListener("click",(e)=>{
             e.preventDefault()
             var data={
-                question: 1,
-                time: 55,
+                question: 1,    
                 score:80,
             }
-            const temp="abs"
         fetch("{% url '1' %}",{
             method:"POST" ,
             headers: {

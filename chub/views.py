@@ -14,7 +14,9 @@ def q1(request):
     if request.method=='POST':
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'], time=data['time'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
         ques.save()
-    return render(request,'chub/index1.html')
+    return render(request,'chub/tempdjango.html')
+def q2(request):
+    return render(request,'chub/guidelines.html')
 
