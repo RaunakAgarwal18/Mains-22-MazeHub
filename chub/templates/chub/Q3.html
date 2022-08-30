@@ -41,7 +41,8 @@
                     </div>
     
                     <div >
-                        <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button>
+                        <!-- <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button> -->
+                        <button ><a onclick="window.location.replace('{% url "2" %}')">B</a></button>
                     </div>
                 </div>
                
@@ -51,5 +52,23 @@
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
         </style>
 </body>
+<script>
+    
+    document.getElementsByTagName("button")[0].addEventListener("click",(e)=>{
+            e.preventDefault()
+            var data={
+                question: 3,    
+                score:80,
+            }
+        fetch("{% url '3' %}",{
+            method:"POST" ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        })  
+    })
+    
 
+</script>
 </html>

@@ -42,7 +42,7 @@
                 In 2014, total Scottish exports (excluding intra-UK trade) were estimated to be £27.5 billion. Scotland's primary exports include whisky, electronics and financial services.The United States, Netherlands, Germany, France, and Norway constitute the country's major export markets.
             </p>
             <p>
-                Whisky is one of Scotland's more known goods of economic activity. Exports increased by 87% in the decade to 2012 and were valued at £4.3 billion in 2013, which was 85% of Scotland's food and drink exports. It supports around 10,000 jobs directly and 25,000 indirectly. It may contribute £400–682 million to Scotland, rather than several billion pounds, as more than 80% of whisky produced is owned by non-Scottish companies.A briefing published in 2002 by the Scottish Parliament Information Centre (SPICe) for the Scottish Parliament's Enterprise and Life Long Learning Committee stated that tourism accounted for up to 5% of GDP and 7.5% of employment.
+                Whisky is one of Scotland's more known goods of economic activity. Exports increased by 87% in the decade to 2012 and were valued at £4.3 billion in 2013, which was 85% of Scotland's food and drink exports. It supports around 10,000 jobs directly and  <button ><a onclick="window.location.replace('{% url "3" %}')">2500</a></button> indirectly. It may contribute £400–682 million to Scotland, rather than several billion pounds, as more than 80% of whisky produced is owned by non-Scottish companies.A briefing published in 2002 by the Scottish Parliament Information Centre (SPICe) for the Scottish Parliament's Enterprise and Life Long Learning Committee stated that tourism accounted for up to 5% of GDP and 7.5% of employment.
             </p>
 
             <!--     Answer -   25000   -->
@@ -53,8 +53,27 @@
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
         </style>
-</body>
 
+</body>
+<script>
+    
+    document.getElementsByTagName("button")[0].addEventListener("click",(e)=>{
+            e.preventDefault()
+            var data={
+                question: 2,    
+                score:80,
+            }
+        fetch("{% url '2' %}",{
+            method:"POST" ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        })  
+    })
+    
+
+</script>
 </html>
 
 
