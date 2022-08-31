@@ -39,13 +39,13 @@
             <div>
                 <div >
                     <label for="Answer">Answer</label>
-                    <input type="text" name="Answer"> 
+                    <input type="text" name="Answer" id="input"> 
                 </div>
 
                 <div >
                     <!-- <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button> -->
                 
-                <button class="button"><a onclick="window.location.replace('{% url "2" %}')">Submit</a></button>
+                <button class="button"><a>Submit</a></button>
                 </div>
             </div>
            
@@ -56,22 +56,40 @@
         </style>
 </body>
 <script>
-    
-    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
-            e.preventDefault()
-            var data={
-                question: 1,    
-                score:80,
-            }
-        fetch("{% url '1' %}",{
-            method:"POST" ,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body : JSON.stringify(data)
-        })  
-    })
-    
+let correct =true;
+document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+  e.preventDefault()
+    if(document.getElementById("input").value!=3)   
+    { 
+        var data={
+            question: 1,    
+            score:0,
+        } 
+        correct=false;
+    }
+    else{
+        var data={
+            question: 1,    
+            score:1,
+        }
+    }
+    fetch("{% url '1' %}",{
+        method:"POST" ,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body : JSON.stringify(data)
+    }) 
+    if(correct==true)
+    {
+        window.location.replace('{% url "2" %}')
+    }
+    else{
+        window.location.replace('{% url "3" %}')
+    }
+ 
+ } )
+
 
 </script>
 </html>
