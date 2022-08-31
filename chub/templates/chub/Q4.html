@@ -50,7 +50,39 @@
     </div>
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
+        a{
+            color:red;
+        }
         </style>
 </body>
+<script>
+    for(i=0;i<8;i++)
+    {
+    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+            e.preventDefault()
+           if(i==3)
+           {
+            var data={
+                question: 4,    
+                score:1,
+            }
+        }
+        else
+        {
+            var data={
+                question: 4,    
+                score:0,
+              }
+        }
+        fetch("{% url '2' %}",{
+            method:"POST" ,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        })  
+    })
+}
 
+</script>
 </html>
