@@ -39,11 +39,11 @@
             <div>
                 <div >
                     <label for="Answer">Answer</label>
-                    <input type="text" name="Answer">
+                    <input type="text" id="input" name="Answer">
                 </div>
 
                 <div >
-                    <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button>
+                    <button class="button "><a>Submit</a></button>
                 </div>
             </div>
            
@@ -53,6 +53,42 @@
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
         </style>
 </body>
-
+<script>
+    let correct =true;
+        document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+          e.preventDefault()
+            if(document.getElementById("input").value.toLowerCase()!='heroine')   
+            { 
+                var data={
+                    question: 1,    
+                    score:0,
+                } 
+                correct=false;
+            }
+            else{
+                var data={
+                    question: 1,    
+                    score:1,
+                }
+            }
+            fetch("{% url '15' %}",{
+                method:"POST" ,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify(data)
+            }) 
+            if(correct==true)
+            {
+                window.location.replace('{% url "9" %}')
+            }
+            else{
+                window.location.replace('{% url "6" %}')
+            }
+         
+         } )
+        
+        
+        </script>
 </html>
  
