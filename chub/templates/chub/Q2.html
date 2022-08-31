@@ -52,17 +52,29 @@
     </div>
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
-        </style>
+       
+    </style>
 
 </body>
 <script>
-    
-    document.getElementsByTagName("button")[0].addEventListener("click",(e)=>{
+    for(i=0;i<3;i++)
+    {
+    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
             e.preventDefault()
+           if(i==2)
+           {
             var data={
                 question: 2,    
-                score:80,
+                score:1,
             }
+        }
+        else
+        {
+            var data={
+                question: 2,    
+                score:0,
+              }
+        }
         fetch("{% url '2' %}",{
             method:"POST" ,
             headers: {
@@ -71,7 +83,7 @@
             body : JSON.stringify(data)
         })  
     })
-    
+}
 
 </script>
 </html>
