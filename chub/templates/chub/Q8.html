@@ -43,7 +43,7 @@
             <span style="padding-left: 4%;padding-right: 5%;">7</span>
             <span style="padding-left: 4%;padding-right: 5%;">5</span>
 
-            <!--     Answer -   25000   -->
+            <!--     Answer -   35   -->
         </p>
         <br>
        
@@ -63,9 +63,40 @@
     </div>
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
+        a{
+            color: red;
+        }
         </style>
 </body>
-
+<script>
+    for(i=0;i<document.getElementsByTagName("a").length;i++)
+        {
+        document.getElementsByTagName("a")[i].addEventListener("click",(e)=>{
+                e.preventDefault()
+               if(i==1)
+               {
+                var data={
+                    question: 8,    
+                    score:1,
+                }
+            }
+            else
+            {
+                var data={
+                    question: 8,    
+                    score:0,
+                  }
+            }
+            fetch("{% url '8' %}",{
+                method:"POST" ,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify(data)
+            })  
+        })
+    }
+    </script>
 </html>
 
 
