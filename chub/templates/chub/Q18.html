@@ -1,4 +1,4 @@
-{%load static %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHNOTHLON</title>
-    <link rel="stylesheet" href="{% static '/css/style3.css' %}">
+    <link rel="stylesheet" href="..\css\style3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="flex direction">
         <div class="size flex ">
             <!-- TECHNOTHLON 2K22 -->
-            <img src="{% static '/images/Technothlon white.svg'%}" class="img1" alt="">
+            <img src="..\images\Technothlon white.svg" class="img1" alt="">
         </div>
         <br> 
         
@@ -29,23 +29,21 @@
             <div class="flex direction">
 
                 <div class="size3  ">
-                    You have 4 chain pieces with 3 loops each. You can cut any loop and join it to any other loop. How many minimum number of cuts will be required to make a circular chain. 
+                    What word in the English language does the following: The first two letters signify a male, the first three letters signify a female, the first four letters signify a great, while the entire world signifies a great woman. What is the word? 
 
                 </div>
             </div>
 
 
-            <!--  Answer  -   3    -->
+            <!--  Answer  -   Heroine    -->
             <div>
                 <div >
                     <label for="Answer">Answer</label>
-                    <input type="text" name="Answer"> 
+                    <input type="text" name="Answer">
                 </div>
 
                 <div >
-                    <!-- <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button> -->
-                
-                <button class="button"><a onclick="window.location.replace('{% url "2" %}')">Submit</a></button>
+                    <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button>
                 </div>
             </div>
            
@@ -55,23 +53,6 @@
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
         </style>
 </body>
-<script>
-    
-    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
-            e.preventDefault()
-            var data={
-                question: 1,    
-                score:80,
-            }
-        fetch("{% url '1' %}",{
-            method:"POST" ,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body : JSON.stringify(data)
-        })  
-    })
-    
 
-</script>
 </html>
+ 
