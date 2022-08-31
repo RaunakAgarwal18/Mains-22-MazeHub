@@ -6,8 +6,10 @@ import datetime
 import json
 from chub.models import User_questions
 @csrf_exempt
+@login_required
 def guide(request):
     return render(request,'chub/guidelines.html')
+    
 def q1(request):
     if request.method=='POST':
         print(json.loads(request.body))
@@ -15,6 +17,7 @@ def q1(request):
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
         ques.save()
     return render(request,'chub/Q1.html')
+
 def q2(request):
     if request.method=='POST':
         print(json.loads(request.body))
@@ -22,10 +25,13 @@ def q2(request):
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
         ques.save()
     return render(request,'chub/Q2.html')
+
 def q3(request):
     if request.method=='POST':
+
         print(json.loads(request.body))
         data=json.loads(request.body)
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
         ques.save()
     return render(request,'chub/Q3.html')   
+
