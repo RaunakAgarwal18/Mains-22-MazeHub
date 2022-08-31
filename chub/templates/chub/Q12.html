@@ -38,7 +38,7 @@
             <div>
                 <div >
                     <label for="Answer">Answer</label>
-                    <input type="text" name="Answer">
+                    <input type="text" id="input" name="Answer">
                 </div>
 
                 <div >
@@ -56,7 +56,7 @@
     let correct =true;
         document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
           e.preventDefault()
-            if(document.getElementById("input").value!='B')   
+            if(document.getElementById("input").value.toLowerCase()!='b')   
             { 
                 var data={
                     question: 1,    
