@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-import time
+import datetime
 import json
 from chub.models import User_questions
 
@@ -14,8 +14,7 @@ def q1(request):
     if request.method=='POST':
         print(json.loads(request.body))
         data=json.loads(request.body)
-        print(time.time())
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q1.html')
 @csrf_exempt
@@ -23,7 +22,7 @@ def q2(request):
     if request.method=='POST':
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q2.html')
 @csrf_exempt
@@ -32,7 +31,7 @@ def q3(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q3.html')   
 @csrf_exempt
@@ -41,7 +40,7 @@ def q4(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q4.html')
 
@@ -51,7 +50,7 @@ def q5(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q5.html')
 
@@ -61,7 +60,7 @@ def q6(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q6.html')
 
@@ -71,7 +70,7 @@ def q7(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q7.html')
 
@@ -81,7 +80,7 @@ def q8(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q8.html')
 
@@ -91,7 +90,7 @@ def q9(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q9.html')
 
@@ -101,7 +100,7 @@ def q10(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q10.html')
 
@@ -111,7 +110,7 @@ def q11(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q11.html')
 
@@ -121,7 +120,7 @@ def q12(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q12.html')
 
@@ -131,7 +130,7 @@ def q13(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q13.html')
 
@@ -141,7 +140,7 @@ def q14(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q14.html')
 
@@ -151,7 +150,7 @@ def q15(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q15.html')
 
@@ -161,7 +160,7 @@ def q16(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q16.html')
 
@@ -171,7 +170,7 @@ def q17(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q17.html')
 
@@ -181,7 +180,7 @@ def q18(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q18.html')
 
@@ -191,7 +190,7 @@ def q19(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q19.html')
 
@@ -201,7 +200,7 @@ def q20(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q20.html')
 
@@ -211,7 +210,7 @@ def q21(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q21.html')
 
@@ -221,7 +220,7 @@ def q22(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q22.html')
 
@@ -231,7 +230,7 @@ def q23(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q23.html')
 
@@ -241,6 +240,6 @@ def q24(request):
 
         print(json.loads(request.body))
         data=json.loads(request.body)
-        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'])
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q24.html')
