@@ -52,14 +52,16 @@
     </div>
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
-       
+       a{
+        color: red;
+       }
     </style>
 
 </body>
 <script>
-    for(i=0;i<3;i++)
+    for(i=0;i<document.getElementsByTagName("a").length;i++)
     {
-    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+    document.getElementsByTagName("a")[i].addEventListener("click",(e)=>{
             e.preventDefault()
            if(i==2)
            {

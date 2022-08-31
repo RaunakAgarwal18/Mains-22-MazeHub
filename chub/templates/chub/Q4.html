@@ -56,9 +56,9 @@
         </style>
 </body>
 <script>
-    for(i=0;i<8;i++)
+    for(i=0;i<document.getElementsByTagName("a").length;i++)
     {
-    document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+    document.getElementsByTagName("a")[i].addEventListener("click",(e)=>{
             e.preventDefault()
            if(i==3)
            {
@@ -74,7 +74,7 @@
                 score:0,
               }
         }
-        fetch("{% url '2' %}",{
+        fetch("{% url '4' %}",{
             method:"POST" ,
             headers: {
                 'Content-Type': 'application/json'
