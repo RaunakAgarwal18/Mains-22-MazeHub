@@ -6,6 +6,8 @@ import datetime
 import json
 from chub.models import User_questions
 @csrf_exempt
+def guide(request):
+    return render(request,'chub/guidelines.html')
 def q1(request):
     if request.method=='POST':
         print(json.loads(request.body))

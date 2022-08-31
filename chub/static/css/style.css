@@ -3,13 +3,13 @@ body{
     background-color:black;
     color: white;
     font-size: 55px;
-    height: 100vh;
+    height: auto;
     margin: 0px;
    padding-left: 20px;
    padding-right: 20px;
     font-family:'Avenir LT Std';
     background-image: url('Frame.png');
-    
+    margin-bottom: 5%;
 }
 .main{
     height: 100%;
@@ -20,19 +20,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:70%;
-    width: 100%;
+    padding: 1%;
+    height:60%;
+    /* width: 70%; */
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-   
+    background-color: black;
 
 }
 .FLEX{
     display: flex;
-    
     flex-direction: column;
-
-   
+    align-items: center;
+    /* width: 70%; */
 }
 .FLEX2{
     display: flex;
@@ -79,8 +79,8 @@ form{
     width: 100%;
 }
 label{
-    width: 100%;
-height: 50px; 
+width: 100%;
+display: inline-block;
 font-size: 27px;
 font-family: sans-serif;
  
@@ -95,11 +95,17 @@ margin-bottom: 10px;
 
 }
 .button{
-    width: 30%;
-    height: 50px;
-    background-color:rgb(9, 9, 216);
-  color: white;
-  border: none;
+    background-color: #1526e0; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 50px;
+    cursor: pointer;
+    border-radius: 15px;
 }
 .left_techno{
 font-size: 50px;
@@ -110,4 +116,7 @@ color: #bfa31e;
 border-top-left-radius: 15px;
 border-bottom-left-radius: 15px;
 z-index: 1;
+}
+.error{
+    font-size: 13px;
 }

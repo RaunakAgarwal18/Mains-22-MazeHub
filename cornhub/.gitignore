@@ -34,7 +34,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -82,7 +82,8 @@ target/
 *.log
 *.pot
 *.pyc
-__pycache__/
+/chub/__pycache__/
+/corhub/__pycache__/
 local_settings.py
 
 .env
