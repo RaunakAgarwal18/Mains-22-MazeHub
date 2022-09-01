@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHNOTHLON</title>
-    <link rel="stylesheet" href="..\css\style3.css">
+    <link rel="stylesheet" href="{% static '/css/style3.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="flex direction">
         <div class="size flex ">
             <!-- TECHNOTHLON 2K22 -->
-            <img src="..\images\Technothlon white.svg" class="img1" alt="">
+            <img src="{% static '/images/Technothlon white.svg'%}" class="img1" alt="">
         </div>
         <div class="flex direction font_size">
             ROUND 22
@@ -33,16 +33,16 @@
                     then who will win the game if both plays optimally.
                 </div>
             </div>
-            <div>
-                <div class="margin">
+            <div class="center111">
+                <div>
                     <label for="Answer">Answer</label>
                     <input type="text" name="Answer">
                 </div>
+                    <div>
+                        <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button>
+                    </div>
+                
 
-                <div>
-                    <button class="button "><a>Submit</a></button>
-                   
-                </div>
             </div>
         </div>
     </div>
@@ -57,18 +57,18 @@
             if(document.getElementById("input").value.toLowerCase()!='a')   
             { 
                 var data={
-                    question: 1,    
+                    question: 22,    
                     score:0,
                 } 
                 correct=false;
             }
             else{
                 var data={
-                    question: 1,    
+                    question: 22,    
                     score:1,
                 }
             }
-            fetch("{% url '15' %}",{
+            fetch("{% url '22' %}",{
                 method:"POST" ,
                 headers: {
                     'Content-Type': 'application/json'

@@ -28,21 +28,21 @@
             <div class="flex direction">
 
                 <div class="size3  ">
-                    A and B are playing a new game today. They form a tower of 15 coins and make a move in alternate turns. Beerus plays first. In one step, the player can remove either 1, 2, or 4 coins from the tower. The person to make the last move wins the game. Can you find out who wins the game? A starts the game. 
+                    Anoukalesio and Zaneverett are playing a new game today. They form a tower of 15 coins and make a move in alternate turns. Beerus plays first. In one step, the player can remove either 1, 2, or 4 coins from the tower. The person to make the last move wins the game. Can you find out who wins the game? A starts the game. 
 
                 </div>
             </div>
-            <!-- Answer  -  B   -->
+            <!-- Answer  - Zaneverett   -->
             <div>
-                <div>
-                    <div >
+                <div class="center111">
+                    <div>
                         <label for="Answer">Answer</label>
                         <input type="text" id="input" name="Answer">
                     </div>
     
                     <div >
                         <!-- <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button> -->
-                        <button class-"button"><a>Submit</a></button>
+                        <button>Submit</button>
                     </div>
                 </div>
                
@@ -56,17 +56,17 @@
 let correct =true;
     document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
       e.preventDefault()
-        if(document.getElementById("input").value.toLowerCase()!='b')   
+        if(document.getElementById("input").value.toLowerCase()!='zaneverett')   
         { 
             var data={
-                question: 1,    
+                question: 3,    
                 score:0,
             } 
             correct=false;
         }
         else{
             var data={
-                question: 1,    
+                question: 3,    
                 score:1,
             }
         }
