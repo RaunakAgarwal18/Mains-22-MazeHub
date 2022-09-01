@@ -243,3 +243,7 @@ def q24(request):
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
         ques.save()
     return render(request,'chub/Q24.html')
+
+def end(request):
+
+return render(request,'chub/Endpage.html')    

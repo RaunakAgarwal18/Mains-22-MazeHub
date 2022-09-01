@@ -34,13 +34,16 @@
                    <br> 
                     Train B can start moving from any station only when train A has reached the next station otherwise it has to wait. 
                     
-                    Find the time taken by train B to reach station 7.      
+                    Find the time taken by train B to reach station 7.  
+                    <br>
+                    If your answer is 5 hrs then type 5
+                    <br>    
                       </p>
                    
                     <br><br>
                 </div>
             </div>
-            <!-- Answer  -  36 hrs   -->
+          
             <div class="center111">
                 <div>
                     <label for="Answer">Answer</label>
@@ -63,7 +66,7 @@
     let correct =true;
         document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
           e.preventDefault()
-            if(document.getElementsByTagName("input")[0].value.toLowerCase()!='36 hrs')   
+            if(document.getElementsByTagName("input")[0].value.toLowerCase()!='36')   
             { 
                 var data={
                     question: 15,    

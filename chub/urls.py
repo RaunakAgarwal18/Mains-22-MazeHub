@@ -28,4 +28,5 @@ urlpatterns = [
     path('gqwoledaslj',views.q22,name='22'),
     path('sdsglkja',views.q23,name='23'),
     path('sdgkjhads',views.q24,name='24'),
+    path('end',views.end,name='end'),
 ]
