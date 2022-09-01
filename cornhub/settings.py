@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
-from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,18 +74,24 @@ WSGI_APPLICATION = 'cornhub.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+#psql://webops:techniche_22@localhost:5432/techniche22
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'chub22',
+#        'USER':'techno',
+#        'PASSWORD':'zGB%xVCAO9Z6',
+#        'HOST':'localhost',
+#        'PORT':'5432'
+#    }
+#}
+#DATABASES = {"default": env.db("psql://techno:zGB%xVCAO9Z6@localhost:5432/chub22", "sqlite:///sqlite3.db")}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'chub22',
-        'USER':'techno',
-        'PASSWORD':'zGB%xVCAO9Z6',
-        'HOST':'localhost',
-        'PORT':''
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -126,7 +131,7 @@ LOGIN_URL='login'
 STATIC_URL = "/static/"
 #Location of static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "chub/static"), ]
-STATIC_ROOT  = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT  = os.path.join(BASE_DIR, "chub/staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
