@@ -3,13 +3,13 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 import datetime
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate,login
+from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
+from django.contrib.auth import authenticate,login,logout
 
 import json
 from chub.models import User_questions
 
-
+@csrf_exempt
 def index(request):
     if not request.user.is_authenticated:
         if request.method == "POST":
@@ -32,8 +32,21 @@ def index(request):
     else:
         return redirect('guide')
 @csrf_exempt
+def register(request):
+    form = UserCreationForm()
+    if request.method=='POST':
+        form=UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    context={'form':form}
+    return render(request,'chub/register.html',context)
+@csrf_exempt
 def guide(request):
     return render(request,'chub/guidelines.html')
+def user_logout(request):
+    logout(request)
+    return redirect('login')    
 @csrf_exempt
 def q1(request):
     if request.method=='POST':
@@ -53,7 +66,7 @@ def q2(request):
 @csrf_exempt
 def q3(request):
     if request.method=='POST':
-
+        
         print(json.loads(request.body))
         data=json.loads(request.body)
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())

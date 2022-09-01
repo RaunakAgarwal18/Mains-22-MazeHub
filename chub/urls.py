@@ -4,6 +4,8 @@ from . import views
 urlpatterns = [
     # path('', auth_views.LoginView.as_view(template_name='chub/login.html'), name='login'),
     path('',views.index,name='login'),
+    path('register',views.register,name='register'),
+    path('logout',views.user_logout,name='logout'),
     path('guidelines',views.guide,name='guide'),
     path('dsafasgadfdkh',views.q1,name='1'),
     path('dsfsafsfsdf',views.q2,name='2'),

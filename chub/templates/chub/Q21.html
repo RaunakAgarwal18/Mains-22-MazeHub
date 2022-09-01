@@ -102,8 +102,13 @@
             },
             body: JSON.stringify(data)
         })
+        if(correct==true)
+            {
+                window.location.replace("{% url "end" %}")
+            }else{
+                window.location.replace("{% url "21" %}")
+            }
         
-        window.location.replace("{% url "end" %}")
 
     })
 
