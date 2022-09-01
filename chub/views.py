@@ -6,6 +6,25 @@ import datetime
 import json
 from chub.models import User_questions
 
+
+def index(request):
+    if not request.user.is_authenticated:
+        if request.method == "POST":
+            form=AuthenticationForm(request=request,data=request.POST)
+            if form.is_valid():
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password']
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    login(request, user)
+                    messages.success(request,'Logged in Successfully!!')
+                    return redirect('profile')
+        else:
+            form=AuthenticationForm()
+        context = {'form': form}
+        return render(request ,'users/index.html', context)
+    else:
+        return redirect('profile')
 @csrf_exempt
 def guide(request):
     return render(request,'chub/guidelines.html')
