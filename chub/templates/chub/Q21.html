@@ -23,99 +23,95 @@
             ROUND 21
             <hr>
         </div>
-     
-           
 
-                <div class="size3">
-                    You have been trapped in a room and the door has a password lock on it. The password is of 9 digits,
-                    which contain each of the digit from 1 to 9. The number is divisible by 9 when the number of digits
-                    is 9. When we remove the last digit the number of digits become 8 and the number is divisible by 8
-                    and so on. There is increasing poisonous gas in the room. Can you find out the password to save
-                    yourself?
-                    <p>Divisibility rule for:</p>
-                    <ul>
-                        <li>
-                            2 : Last digit should be even
-                        </li>
-                        <li>
-                            3 : sum of digits should be divisible by 3
-                        </li>
-                        <li>
-                            4: Last 2 digits must be divisible by 4
-                        </li>
-                        <li>
-                            5: last digit should be 0 or 5
-                        </li>
-                        <li>
-                            6. divisible by both 2 and 3
-                        </li>
-                        <li>
-                            7: The difference between twice the unit digit of the number and the remaining part of the
-                            number
-                            should be divisible by 7 or should be 0
-                        </li>
-                        <li>
-                            8: last 3 digits should be divisible by 8
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <div class="margin">
-                        <label for="Answer">Answer</label>
-                        <input type="text" name="Answer">
-                    </div>
 
-                    <div>
-                        <button class="button "><a>Submit</a></button>
-                       
-                    </div>
-                </div>
-            </div>
+
+        <div class="size3">
+            You have been trapped in a room and the door has a password lock on it. The password is of 9 digits,
+            which contain each of the digit from 1 to 9. The number is divisible by 9 when the number of digits
+            is 9. When we remove the last digit the number of digits become 8 and the number is divisible by 8
+            and so on. There is increasing poisonous gas in the room. Can you find out the password to save
+            yourself?
+            <p>Divisibility rule for:</p>
+            <ul>
+                <li>
+                    2 : Last digit should be even
+                </li>
+                <li>
+                    3 : sum of digits should be divisible by 3
+                </li>
+                <li>
+                    4: Last 2 digits must be divisible by 4
+                </li>
+                <li>
+                    5: last digit should be 0 or 5
+                </li>
+                <li>
+                    6. divisible by both 2 and 3
+                </li>
+                <li>
+                    7: The difference between twice the unit digit of the number and the remaining part of the
+                    number
+                    should be divisible by 7 or should be 0
+                </li>
+                <li>
+                    8: last 3 digits should be divisible by 8
+                </li>
+            </ul>
         </div>
+        <div class="center111">
+            <div>
+                <label for="Answer">Answer</label>
+                <input type="text" name="Answer">
+            </div>
+            <div>
+                <button class="button "><a onclick="window.location.replace('index4.html')">Submit</a></button>
+            </div>
+
+
+        </div>
+
     </div>
+   
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
     </style>
 </body>
 <script>
-    let correct =true;
-        document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
-          e.preventDefault()
-            if(document.getElementById("input").value.toLowerCase()!='heroine')   
-            { 
-                var data={
-                    question: 1,    
-                    score:0,
-                } 
-                correct=false;
+    let correct = true;
+    document.getElementsByTagName("a")[0].addEventListener("click", (e) => {
+        e.preventDefault()
+        if (document.getElementById("input").value.toLowerCase() != 'heroine') {
+            var data = {
+                question: 21,
+                score: 0,
             }
-            else{
-                var data={
-                    question: 1,    
-                    score:1,
-                }
+            correct = false;
+        }
+        else {
+            var data = {
+                question: 21,
+                score: 1,
             }
-            fetch("{% url '21' %}",{
-                method:"POST" ,
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body : JSON.stringify(data)
-            }) 
-            // if(correct==true)
-            // {
-            //     window.location.replace('{% url "9" %}')
-            // }
-            // else{
-            //     window.location.replace('{% url "6" %}')
-            // }
-         
-         } )
-        
-        
-        </script>
+        }
+        fetch("{% url '21' %}", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        // if(correct==true)
+        // {
+        //     window.location.replace('{% url "9" %}')
+        // }
+        // else{
+        //     window.location.replace('{% url "6" %}')
+        // }
+
+    })
+
+
+</script>
+
 </html>
-
-
-
-
