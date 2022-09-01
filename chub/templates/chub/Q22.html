@@ -57,18 +57,18 @@
             if(document.getElementById("input").value.toLowerCase()!='a')   
             { 
                 var data={
-                    question: 1,    
+                    question: 22,    
                     score:0,
                 } 
                 correct=false;
             }
             else{
                 var data={
-                    question: 1,    
+                    question: 22,    
                     score:1,
                 }
             }
-            fetch("{% url '15' %}",{
+            fetch("{% url '22' %}",{
                 method:"POST" ,
                 headers: {
                     'Content-Type': 'application/json'
