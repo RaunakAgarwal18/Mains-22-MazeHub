@@ -53,5 +53,23 @@
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
         </style>
 </body>
-
+<script>
+document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
+    e.preventDefault()
+  
+    var data={
+        question: 0,    
+        score:0,
+    } 
+      fetch("{% url 'guide' %}",{
+          method:"POST" ,
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body : JSON.stringify(data)
+      }) 
+   } )
+  
+  
+  </script>
 </html>

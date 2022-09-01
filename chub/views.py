@@ -43,6 +43,11 @@ def register(request):
     return render(request,'chub/register.html',context)
 @csrf_exempt
 def guide(request):
+    if request.method=='POST':
+        print(json.loads(request.body))
+        data=json.loads(request.body)
+        ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
+        ques.save()
     return render(request,'chub/guidelines.html')
 def user_logout(request):
     logout(request)
@@ -66,7 +71,7 @@ def q2(request):
 @csrf_exempt
 def q3(request):
     if request.method=='POST':
-        
+
         print(json.loads(request.body))
         data=json.loads(request.body)
         ques = User_questions(rollno=request.user,question=data['question'],score=data['score'],duration=datetime.datetime.now())
