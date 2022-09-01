@@ -58,6 +58,7 @@
 let correct =true;
 document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
   e.preventDefault()
+
     if(document.getElementByTagName("input")[0].value!=3)   
     { 
         var data={
@@ -81,10 +82,10 @@ document.getElementsByTagName("a")[0].addEventListener("click",(e)=>{
     }) 
     if(correct==true)
     {
-        window.location.replace('{% url "3" %}')
+        window.location.replace("{% url "3" %}")
     }
     else{
-        window.location.replace('{% url "12" %}')
+        window.location.replace("{% url "12" %}")
     }
  
  } )
