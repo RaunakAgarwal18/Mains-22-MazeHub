@@ -3,6 +3,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 import datetime
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate,login
+
 import json
 from chub.models import User_questions
 
@@ -17,14 +20,17 @@ def index(request):
                 user = authenticate(username=username, password=password)
                 if user is not None:
                     login(request, user)
-                    messages.success(request,'Logged in Successfully!!')
-                    return redirect('profile')
-        else:
+                    return redirect('guide')
+                else:
+                    form=AuthenticationForm()
+            else:
+                form=AuthenticationForm()
+        else: 
             form=AuthenticationForm()
         context = {'form': form}
-        return render(request ,'users/index.html', context)
+        return render(request ,'chub/login.html', context)
     else:
-        return redirect('profile')
+        return redirect('guide')
 @csrf_exempt
 def guide(request):
     return render(request,'chub/guidelines.html')
