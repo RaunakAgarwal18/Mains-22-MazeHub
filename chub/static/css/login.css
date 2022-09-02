@@ -48,7 +48,7 @@ body{
     width: 70%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    allign-items; center;
+    allign-items: center;
 }
 .FLEX{
     display: flex;
