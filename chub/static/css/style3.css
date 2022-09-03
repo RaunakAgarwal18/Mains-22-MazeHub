@@ -58,6 +58,9 @@ body {
     margin-top: 0px;
 }
 
+.raw{
+    margin-left: -200px;
+}
 hr {
     width: 350px;
 }
@@ -135,6 +138,10 @@ img {
     height: 40%;
 
     border-radius: 15px;
+}
+#mascot{
+    position: absolute;
+    margin-left: 500px;
 }
 
 @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
