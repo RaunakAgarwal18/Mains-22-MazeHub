@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHNOTHLON</title>
-    <link rel="stylesheet" href="..\css\style2.css">
+    <link rel="stylesheet" href="{% static '/css/style2.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
@@ -18,7 +18,7 @@
     <div class="flex direction">
         <div class="size flex ">
             <!-- TECHNOTHLON 2K22 -->
-            <img src="..\images\Technothlon white.svg" alt="">
+            <img src="{% static '/images/Technothlon white.svg'%}" alt="">
         </div>
         <div class="flex direction font_size">
             Tree 6
@@ -37,19 +37,19 @@
 
                 <br> 
                 <br>
-                <span style="padding-left: 2%;padding-right: 5%;">97</span>
-                <span style="padding-left: 2%;padding-right: 5%;">86</span>
-                <span style="padding-left: 2%;padding-right: 5%;">94</span>
-                <span style="padding-left: 2%;padding-right: 5%;">95</span>
-                <span style="padding-left: 2%;padding-right: 5%;">74</span>
-                <span style="padding-left: 2%;padding-right: 5%;">99</span>
-                <span style="padding-left: 2%;padding-right: 5%;">88</span>
-                <span style="padding-left: 2%;padding-right: 5%;">73</span>
-                <span style="padding-left: 2%;padding-right: 5%;">96</span>
-                <span style="padding-left: 2%;padding-right: 5%;">90</span>
-                <span style="padding-left: 2%;padding-right: 5%;">91</span>
+                <span style="padding-left: 1%;padding-right: 5%;">97</span>
+                <span style="padding-left: 1%;padding-right: 5%;">86</span>
+                <span style="padding-left: 1%;padding-right: 5%;">94</span>
+                <span style="padding-left: 1%;padding-right: 5%;">95</span>
+                <span style="padding-left: 1%;padding-right: 5%;">74</span>
+                <span style="padding-left: 1%;padding-right: 5%;">99</span>
+                <span style="padding-left: 1%;padding-right: 5%;">88</span>
+                <span style="padding-left: 1%;padding-right: 5%;">73</span>
+                <span style="padding-left: 1%;padding-right: 5%;">96</span>
+                <span style="padding-left: 1%;padding-right: 5%;">90</span>
+                <span style="padding-left: 1%;padding-right: 5%;">91</span>
                 <br>
-                <br>
+                <br><br><br>
             </div>
             <p>
                 The Antonine Wall, known to the Romans as Vallum Antonini, was a turf fortification on stone foundations, built by the Romans across what is now the Central Belt of Scotland, between the Firth of Forth and the Firth of Clyde. Built some <a onclick="window.location.replace('{% url "5" %}')">450</a> years after Hadrian's Wall to the south, and intended to supersede it, while it was garrisoned it was the northernmost frontier barrier of the Roman Empire. It spanned approximately <a onclick="window.location.replace('{% url "8" %}')">540</a> kilometres and was about 3 metres (10 feet) high and 5 metres (16 feet) wide. Lidar scans have been carried out to establish the length of the wall and the Roman distance units used. Security was bolstered by a deep ditch on the northern side. It is thought that there was a wooden palisade on top of the turf. The barrier was the second of two "great walls" created by the Romans in Great Britain in <a onclick="window.location.replace('{% url "24" %}')">560</a> AD. Its ruins are less evident than those of the better-known and longer Hadrian's Wall to the south, primarily because the turf and wood wall has largely weathered away, unlike its stone-built southern predecessor.
@@ -58,9 +58,6 @@
     </div>
     <style>
         @import url('http://fonts.cdnfonts.com/css/avenir-lt-std');
-        a{
-        color: red;
-        }
         </style>
 </body>
 <script>
