@@ -1,54 +1,26 @@
-Title : <b>MazeHub</b>
+<!-- <img src = "https://user-images.githubusercontent.com/103554673/199926393-ea695c3c-64a9-489d-b560-8064c624fcc6.png" width ="1200px" align = "center"> -->
+<img src = "https://user-images.githubusercontent.com/103554673/199931530-788ff777-d22c-43e0-9b9e-06bfc3af0e74.png" width ="1200px" height = "300px">
 
-This is a Web based game created for the Juniors squad (class 9 and 10) qualified for Technothlon Mains, conducted during Techniche'22 between 1st and 4th September, after clearing Technothlon prelims conducted on 
-31st July, 2022.<br>
+<h1><b>MazeHub</b></h1>
+<h2><b>What is This?</b></h2>
+
+
+A web based question and answer game in which we have to give correct answers continuously in order to reach the end. If at any point we give any wrong answer then we will be directed to a question which is farther from the end point.  
+
+<h2>Why did we build this?</h2>
+
+This was created for the Junior squad (class 9 and 10) qualified for Technothlon Mains, conducted during Techniche'22 between 1st and 4th September,at Indian Institute Of Technology, Guwahati, after clearing Technothlon prelims conducted on 31st July, 2022.<br>
 Technothlon is an international school championship organized by the student fraternity of IIT Guwahati. Technothlon began in 2004 in a small room with an aim to
-"Inspire Young Minds" . Starting on our journey with a participation of 200 students confined to the city of Guwahati, over the past 15 years we have expanded our reach to over 400 cities all over India and various centers abroad. Now Technothlon spans its wings in 30+ countries internationally. Technothlon is not just an exam but it is an enthralling journey on the path of logic which will test your logical and creative thinking to its limit. The championship is organized over 2 rounds :Prelims and Mains.
+"Inspire Young Minds" . Starting on our journey with a participation of 200 students confined to the city of Guwahati, over the past 15 years we have expanded our reach to over 400 cities all over India and various centers abroad. Now Technothlon spans its wings in 30+ countries internationally. Technothlon is not just an exam but it is an enthralling journey on the path of logic which will test your logical and creative thinking to its limit. The championship is organized over 2 rounds : Prelims and Mains.
 
+<h2>Who are we?</h2>
 
-The rules and guidelines for the game are given below: 
+We are a team of 5 - [Raunak](https://github.com/RaunakAgarwal18), [Akshat](https://github.com/Akshat2403), [Prince](https://github.com/Prince-9-9), [Geet](https://github.com/Geet-manik) and [Mokshith]() , all pursuing their B.Tech from Indian Institute of Technology, Guwahati.
 
-You went to a magical forest to find some superpower. The forest being magical contains trees that can speak because it contains the spirit of noblemen who would 
-guide only the deserving towards the superpower. At each turn, the noblemen would ask you one question and help you with the way ahead if you give the correct answer 
-or send you to some other random tree, can be the one with whom you already talked before, on answering wrong.The more wrong answers you give the more longer the way to the super power becomes.
+<h2>What did we build this with?</h2>
+<img src = "https://i.ibb.co/N7wb0Gc/Untitled-design-1.png">
+We used JavaScript, along with basic HTML and CSS, for the front-end and Django for the backend.<br><br>
 
-There are two types of questions that the noblemen would ask on the way.
-    Option type
-      In these types of Questions, the noblemen would ask you a question and narrate a passage in front of you and you need to find the correct answer 
-      from the narrated passage. Clicking the correct answer would bring you closer to the superpower while clicking the wrong answer will carry you 
-      farther from the superpower.
-    Submit type
-      In this type of question, the noblemen will ask you questions and you need to tell the correct answer. Type the answer in the space provided and
-      submit it. In case the answer is a word, you can submit it in any case that is upper or lower case (your wish).
-Are you the deserving one to get the superpower?? This is the chance to prove yourself.
-Note: The answers can be partial words or part of a word!!
-
-The game can be played on "https://mazehub.techniche.org.in/"
-
-<b>Web Languages used:</b>
-<ul>
-  <li>FrontEnd<br>
-    <ol>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ol>
-  </li>
-  <li>BackEnd<br>
-    <ol>
-      <li>Django</li>
-    </ol>
-  </li>
-</ul>
-
-Credits: Team Technothlon <br>
-         Members: 
-                  <ul>
-                    <li>Shankar (Head)</li>
-                    <li>Siddhartha (Head)</li>
-                    <li>Raunak Agarwal</li>
-                    <li>Geet Manik</li>
-                    <li>Posa Mokshith</li>
-                    <li>Prince Kumar</li>
-                    <li>Akshat Aren</li></ul>
+<b>The game can be played on</b> "https://mazehub.techniche.org.in/"<br>
+Credits: <b>Team Technothlon</b>
                  
